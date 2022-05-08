@@ -1,0 +1,11 @@
+.video-container {
+    height: calc(100vh - $control-pannel-height);
+    width: 100vw;
+
+    & .videos {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+    }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Brahmware-Invited",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sanchayan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "4.6.0",
+    "dotenv": "^10.0.0",
+    "emailjs-com": "^3.1.0",
+    "express": "^4.17.1",
+    "react-bootstrap": "^1.6.1",
+    "simple-peer": "^9.11.0",
+    "socket.io": "^4.1.2",
+    "styled-components": "^5.3.0",
+    "mongoose": "^6.1.6",
+    "uuid": "^8.3.2",
+    "wrtc": "^0.4.7",
+    "swiper": "^6.5.9"
+  },
+  "scripts": {
+    "serverStart": "node server.js",
+    "serverDevStart": "nodemon server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

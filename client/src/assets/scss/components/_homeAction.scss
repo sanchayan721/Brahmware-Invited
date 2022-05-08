@@ -1,0 +1,73 @@
+.section-action {
+    width: 60em;
+    font-size: 1em;
+    padding: 4em 2em;
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    border-radius: $medium-border-radius;
+    & .tab-names {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8em;
+        color: $black;
+        font-weight: 400;
+        & .create_meeting,
+        & .join_meeting {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 0.3em 1em;
+            border-radius: $medium-border-radius;
+            transition: $transition-base;
+        }
+        & .active {
+            background-color: rgba($color: $black, $alpha: 0.2);
+        }
+        & .inactive {
+            &:hover {
+                background-color: $black;
+                color: $primary
+            }
+        }
+    }
+    & .error-display-area {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 0em;
+        width: 100%;
+        background-color: rgba($color: $black, $alpha: 0.2);
+        & .error {
+            position: absolute;
+            padding: 0.1em 1.5em;
+            background-color: rgba($color: $black, $alpha: 0.9);
+            border-radius: $medium-border-radius;
+            & span {
+                color: $danger;
+                font-weight: 500;
+            }
+        }
+    }
+    & .active-content {
+        width: 100%;
+        border-radius: $medium-border-radius;
+    }
+    @media #{$tablet-device} {
+        width: 100%;
+        font-size: 0.8em;
+    }
+    @media #{$large-mobile, $small-mobile} {
+        width: 100%;
+        font-size: 0.5em;
+    }
+}

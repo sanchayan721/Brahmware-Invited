@@ -1,0 +1,44 @@
+.join-meeting {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em;
+    font-size: 1em;
+    gap: 2em;
+    color: $black;
+    & .invitation-code,
+    & .target-name {
+        position: relative;
+        & input {
+            font-size: 1.5em;
+            padding: 0.5em 1em;
+        }
+    }
+
+    & .button-row {
+        width: 100%;
+        font-size: 1.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 1.5em;
+        & .button-part {
+            & button {
+                height: 2.5em;
+                background-color: rgba($color: $black, $alpha: 0.2);
+                font-size: 1em;
+                font-weight: 400;
+                transition: $transition-base;
+                border: none;
+
+                &:hover {
+                    background-color: $black;
+                    color: $primary
+                }
+            }
+        }
+    }
+}

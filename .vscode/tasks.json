@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "serverDevStart",
+			"problemMatcher": [],
+			"label": "npm: serverDevStart",
+			"detail": "nodemon server.js"
+		}
+	]
+}

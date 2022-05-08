@@ -1,0 +1,14 @@
+button {
+    width: 6em;
+    height: 2.25em;
+    background-color: $primary;
+    border: none;
+    border-radius: $medium-border-radius;
+    transition: $transition-base;
+    font-weight: 500;
+    &:hover {
+        background-color: $black;
+        border: 1.5px solid $primary;
+        color: $primary
+    }
+}

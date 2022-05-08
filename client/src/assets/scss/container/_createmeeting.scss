@@ -1,0 +1,113 @@
+.create-meeting {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em;
+    font-size: 1em;
+    gap: 2em;
+    color: $black;
+    & .meeting-name,
+    & .target-name {
+        & input {
+            font-size: 1.5em;
+            padding: 0.5em 1em;
+        }
+    }
+    & .button-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.5em;
+        margin-top: 1.5em;
+        width: 100%;
+        & .checkbox-part {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-left: 1em;
+            gap: 1em;
+            & .checkbox {
+                height: 1.2em;
+                width: 1.2em;
+                cursor: pointer;
+                background-color: rgba($color: $black, $alpha: 0.2);
+                border-radius: 0.3em;
+                & .tick {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    & svg {
+                        height: 1.2em;
+                        fill: $black;
+                    }
+                }
+            }
+            & .checkbox-label {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            & .information {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                & svg {
+                    height: 0.8em;
+                    fill: rgba($color: $black, $alpha: 0.2);
+                    transition: $transition-base;
+                }
+                &:hover{
+                    & svg {
+                        fill: rgba($color: $black, $alpha: 1.0);
+                    }
+                }
+                & .information-modal {
+                    width: 20em;
+                    top: 1em;
+                    position: absolute;
+                    background-color: $loweest-transparent-black;
+                    z-index: 1;
+                    pointer-events: none;
+                    /* offset-x | offset-y | blur-radius | color */
+                    box-shadow: 0 0 1em $lower-transparent-black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: $medium-border-radius;
+                    padding: 1em 2em;
+                    opacity: 0;
+                    transition: $transition-base;
+                    & span {
+                        font-size: 0.6em;
+                        color: $primary;
+                        text-align: justify;
+                    }
+                    &.show {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        & .button-part {
+            align-self: flex-end;
+            & button {
+                height: 2.5em;
+                background-color: rgba($color: $black, $alpha: 0.2);
+                font-size: 1em;
+                font-weight: 400;
+                transition: $transition-base;
+                border: none;
+                &:hover {
+                    background-color: $black;
+                    color: $primary
+                }
+            }
+        }
+    }
+        
+}
